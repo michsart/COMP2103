@@ -30,7 +30,7 @@ function cleanup {
 	echo -e "\nRemoving temporary files...\n"
 	rm -rf /tmp/clamtmp
 	if [ $? != 0 ]; then
-		echo -e "\nThere was an error while attempting to remove the temporary directorty /tmp/clamtmp"
+		echo -e "\nThere was an error while attempting to remove the temporary directory /tmp/clamtmp"
 		exit 1
 	fi
 }
