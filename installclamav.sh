@@ -4,13 +4,17 @@
 # It will first attempt an apt-get install.
 # If that fails, it will then download, compile, and install from binaries.
 # The libssl-dev package is a dependancy and will also be installed.
-# The URL used to download the binaries is statically set. It can be modified at the clamURL variable below.
+# The URL used to download the binaries is statically set. It can be
+#   modified at the clamURL variable below.
 # 
-# This script has only been tested on the Kali Linux 2.0 amd64 distribution (2015-06-03 release).
-# This script comes without warranty of any kind. By using this script, you are agreeeing to release the 
-# author of any liability for damage or data loss caused by its use. You use this script at your own risk.
+# This script has only been tested on the Kali Linux 2.0 amd64 distribution
+#   (2015-06-03 release).
+# This script comes without warranty of any kind. By using this script, you
+#   are agreeeing to release the author of any liability for damage or data
+#   loss caused by its use. You use this script at your own risk.
 #
-# Created by Michael Sartori on Feb 9, 2016 (Michael.Sartori@GeorgianCollege.ca)
+# Created by Michael Sartori on Feb 9, 2016
+#   (Michael.Sartori@GeorgianCollege.ca)
 
 
 # modify this value to change the location of the binaries archive file
