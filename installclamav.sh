@@ -110,6 +110,7 @@ else
 	errchk "There was an error while attempting to create the clamav user. Exiting..."
 fi
 
+
 echo -e "\nCreating directory /usr/local/share/clamav"
 mkdir -p /usr/local/share/clamav
 errchk "There was an error while attempting to create the directory. Exiting..."
