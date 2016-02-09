@@ -10,8 +10,8 @@
 # This script has only been tested on the Kali Linux 2.0 amd64 distribution
 #   (2015-06-03 release).
 # This script comes without warranty of any kind. By using this script, you
-#   are agreeeing to release the author of any liability for damage or data
-#   loss caused by its use. You use this script at your own risk.
+#   are agreeeing to release the author of any liability for damage or loss
+#   of data caused by its use. You use this script at your own risk.
 #
 # Created by Michael Sartori on Feb 9, 2016
 #   (Michael.Sartori@GeorgianCollege.ca)
@@ -100,12 +100,15 @@ cp freshclam.conf.sample freshclam.conf
 errchk "There was an error creating the file. Exiting..."
 linenum=$(( `grep -n "# Comment or remove the line below." freshclam.conf | grep -Eo '^[^:]+'` + 1 ))
 sed -i "$linenum s/^/# /" freshclam.conf
-unset linenum
+
 
 echo -e "\nCreating clamav user..."
 useradd clamav
-errchk "There was an error while attempting to create the clamav user. Exiting..."
-
+if [ $? == 9 ]; then
+	echo "User account already exists."
+else
+	errchk "There was an error while attempting to create the clamav user. Exiting..."
+fi
 
 echo -e "\nCreating directory /usr/local/share/clamav"
 mkdir -p /usr/local/share/clamav
