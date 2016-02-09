@@ -103,7 +103,7 @@ sed -i "$linenum s/^/# /" freshclam.conf
 
 
 echo -e "\nCreating clamav user..."
-useradd clamav
+useradd clamav 2>/dev/null
 if [ $? == 9 ]; then
 	echo "User account already exists."
 else
