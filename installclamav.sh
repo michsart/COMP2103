@@ -3,7 +3,7 @@
 # This script is intented to install the clamav package.
 # It will first attempt an apt-get install.
 # If that fails, it will then download, compile, and install from binaries.
-# The libssl-dev package is a dependancy and will also be installed.
+# The libssl-dev package is a dependency and will also be installed.
 # The URL used to download the binaries is statically set. It can be
 #   modified at the clamURL variable below.
 # 
