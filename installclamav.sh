@@ -51,7 +51,7 @@ fi
 
 apt-get update
 echo -e "\nAttempting to install clamav from repository...\n"
-apt-get install clamav -y 2>/dev/null
+apt-get install clamav clamav-freshclam -y 2>/dev/null
 if [ $? == 0 ]; then
 	echo -e "\nclamav was successfully installed"
 	exit 0
